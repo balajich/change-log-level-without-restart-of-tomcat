@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "75b2289b-5f53-44fc-a1fe-244c37e54839",
+		"name": "change-log-level-without-restart-of-tomcat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1-Get all the configured log levels",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/actuator/loggers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"loggers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2-Get the configured log level of ROOT",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/actuator/loggers/ROOT",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"loggers",
+						"ROOT"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3-Get the configured log level of package org.eduami.spring.logdemo.restapi",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/actuator/loggers/org.eduami.spring.logdemo.restapi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"loggers",
+						"org.eduami.spring.logdemo.restapi"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
