@@ -21,15 +21,15 @@ of application server (Tomcat)
 # Check Log level 
 **Note I am running CURL on windows, if you have any issue. Please use postman client and collection is available 
 at postman/change-log-level-without-restart-of-tomcat.postman_collection.json**
-- Get all the configured log levels: curl -s -L  http://localhost:8080/actuator/loggers
-- Get the configured log level of ROOT:  curl -s -L  http://localhost:8080/actuator/loggers/ROOT
-- Get the configured log level of package org.eduami.spring.logdemo.restapi : curl -s -L  http://localhost:8080/actuator/loggers/org.eduami.spring.logdemo.restapi
+- Get all the configured log levels: ``` curl -s -L  http://localhost:8080/actuator/loggers ``` 
+- Get the configured log level of ROOT: ``` curl -s -L  http://localhost:8080/actuator/loggers/ROOT ```
+- Get the configured log level of package org.eduami.spring.logdemo.restapi : ``` curl -s -L  http://localhost:8080/actuator/loggers/org.eduami.spring.logdemo.restapi ```
 # Change the log level
 -  **This doesnt need restart of tomcat (application)**
-- Change log level of root logger to TRACE:  curl  -i -d '{\"configuredLevel\":\"TRACE\"}'  -H "Content-Type:application/json"  -X POST  http://localhost:8080/actuator/loggers/ROOT
-- Access the application:  curl http://localhost:8080/helloWorld and observe the logs are written in trace
--  Change log level of root logger to ERROR:  curl  -i -d '{\"configuredLevel\":\"ERROR\"}'  -H "Content-Type:application/json"  -X POST  http://localhost:8080/actuator/loggers/ROOT
--  Change log level of package org.eduami.spring.logdemo.restapi to TRACE:  curl  -i -d '{\"configuredLevel\":\"TRACE\"}'  -H "Content-Type:application/json"  -X POST  http://localhost:8080/actuator/loggers/org.eduami.spring.logdemo.restapi
+- Change log level of root logger to TRACE:  ``` curl  -i -d '{\"configuredLevel\":\"TRACE\"}'  -H "Content-Type:application/json"  -X POST  http://localhost:8080/actuator/loggers/ROOT ```
+- Access the application:  ``` curl http://localhost:8080/helloWorld and observe the logs are written in trace ```
+- Change log level of root logger to ERROR: ``` curl  -i -d '{\"configuredLevel\":\"ERROR\"}'  -H "Content-Type:application/json"  -X POST  http://localhost:8080/actuator/loggers/ROOT ```
+- Change log level of package org.eduami.spring.logdemo.restapi to TRACE: ```  curl  -i -d '{\"configuredLevel\":\"TRACE\"}'  -H "Content-Type:application/json"  -X POST  http://localhost:8080/actuator/loggers/org.eduami.spring.logdemo.restapi ```
 # Code walk through
 - Have spring actuator as dependency
 
