@@ -1,4 +1,8 @@
 # Change Log level without restart of tomcat
+In this tutorial we will change the log level of spring boot application during runtime. This doesnt require restart 
+of application server (Tomcat)
+- Enable Spring boot actuator endpoint
+- Change log level using REST API
 # Source Code 
     git clone https://github.com/balajich/reverse-proxy-spring-cloud-loadbalancer.git
 # Video
@@ -26,3 +30,24 @@ at postman/change-log-level-without-restart-of-tomcat.postman_collection.json**
 - Access the application:  curl http://localhost:8080/helloWorld and observe the logs are written in trace
 -  Change log level of root logger to ERROR:  curl  -i -d '{\"configuredLevel\":\"ERROR\"}'  -H "Content-Type:application/json"  -X POST  http://localhost:8080/actuator/loggers/ROOT
 -  Change log level of package org.eduami.spring.logdemo.restapi to TRACE:  curl  -i -d '{\"configuredLevel\":\"TRACE\"}'  -H "Content-Type:application/json"  -X POST  http://localhost:8080/actuator/loggers/org.eduami.spring.logdemo.restapi
+# Code walk through
+- Have spring actuator as dependency
+
+```xml
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+```
+- Enable actuator endpoints by default they are disabled
+
+```yaml
+management:
+  endpoints:
+    web:
+      exposure:
+        include: loggers
+  endpoint:
+    loggers:
+      enabled: true
+```
