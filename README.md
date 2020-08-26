@@ -16,8 +16,8 @@ of application server (Tomcat)
 # Clean and Build
     mvn clean install
 # Running components
-- Rest API instance 1: java -jar .\restapi\target\restapi-0.0.1-SNAPSHOT.jar
-- Rest API instance 2:  java -jar '-Dserver.port=9091' .\restapi\target\restapi-0.0.1-SNAPSHOT.jar
+- Rest API instance 1: ``` java -jar .\restapi\target\restapi-0.0.1-SNAPSHOT.jar ``` 
+- Rest API instance 2: ``` java -jar '-Dserver.port=9091' .\restapi\target\restapi-0.0.1-SNAPSHOT.jar ``` 
 # Check Log level 
 **Note I am running CURL on windows, if you have any issue. Please use postman client and collection is available 
 at postman/change-log-level-without-restart-of-tomcat.postman_collection.json**
