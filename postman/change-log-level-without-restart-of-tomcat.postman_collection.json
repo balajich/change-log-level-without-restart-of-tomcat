@@ -66,6 +66,66 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "4-Change Log Level of Root Logger to TRACE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"configuredLevel\": \"ERROR\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/actuator/loggers/ROOT",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"loggers",
+						"ROOT"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5-Change Log Level of package org.eduami.spring.logdemo.restapi  to ERROR",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"configuredLevel\": \"TRACE\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/actuator/loggers/org.eduami.spring.logdemo.restapi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"loggers",
+						"org.eduami.spring.logdemo.restapi"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"protocolProfileBehavior": {}
