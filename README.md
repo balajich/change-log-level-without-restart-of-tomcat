@@ -32,12 +32,17 @@ Every application (Gateway,restapi) registers it availability with Eureak regist
 # Clean and Build
     mvn clean install
 # Running components
-- Registry: java -jar .\registry\target\registry-0.0.1-SNAPSHOT.jar
-- Gateway:  java -jar .\gateway\target\gateway-0.0.1-SNAPSHOT.jar
 - Rest API instance 1: java -jar .\restapi\target\restapi-0.0.1-SNAPSHOT.jar
 - Rest API instance 2:  java -jar '-Dserver.port=9091' .\restapi\target\restapi-0.0.1-SNAPSHOT.jar
-# Using curl to test environment
-- Access rest api via gateway:  curl http://localhost:8080/
+# Check Log level 
+**Note I am running CURL on windows, if you have any issue. Please use postman client and collection is available 
+at postman/change-log-level-without-restart-of-tomcat.postman_collection.json**
+- Get all the configured log levels: curl -s -L  http://localhost:8080/actuator/loggers
+- Get the configured log level of ROOT:  curl -s -L  http://localhost:8080/actuator/loggers/ROOT
+- Get the configured log level of package org.eduami.spring.logdemo.restapi : curl -s -L  http://localhost:8080/actuator/loggers/org.eduami.spring.logdemo.restapi
+# Change the log level
+-  **This doesnt need restart of tomcat (application)**
+- Change log level of root logger to TRACE:  curl -i -X POST -H 'Content-Type: application/json' -d '{"configuredLevel": "TRACE"}' http://localhost:8080/actuator/loggers/ROOT
 - Access rest api directly on instance1 : curl http://localhost:9090/
 - Access rest api directly on instance2 : curl http://localhost:9090/
 # Hints
