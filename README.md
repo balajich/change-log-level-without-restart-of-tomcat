@@ -4,7 +4,7 @@ of application server (Tomcat)
 - Enable Spring boot actuator endpoint
 - Change log level using REST API
 # Source Code 
-    git clone https://github.com/balajich/reverse-proxy-spring-cloud-loadbalancer.git
+    git clone https://github.com/balajich/change-log-level-without-restart-of-tomcat.git
 # Video
 [![Spring Cloud LoadBalancer](https://img.youtube.com/vi/8HQR6GdtI9o/0.jpg)](https://www.youtube.com/watch?v=8HQR6GdtI9o)
 - https://youtu.be/8HQR6GdtI9o
