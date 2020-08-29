@@ -6,7 +6,7 @@ of application server (Tomcat)
 # Source Code 
     git clone https://github.com/balajich/change-log-level-without-restart-of-tomcat.git
 # Video
-[![Spring Cloud LoadBalancer](https://img.youtube.com/vi/8HQR6GdtI9o/0.jpg)](https://www.youtube.com/watch?v=8HQR6GdtI9o)
+[![Change Log level without restart of tomcat](https://img.youtube.com/vi/o2sXKa9W4OM/0.jpg)](https://www.youtube.com/watch?v=o2sXKa9W4OM)
 - https://youtu.be/8HQR6GdtI9o
 # Architecture
 ![architecture](architecture.png "architecture")
