@@ -7,7 +7,7 @@ of application server (Tomcat)
     git clone https://github.com/balajich/change-log-level-without-restart-of-tomcat.git
 # Video
 [![Change Log level without restart of tomcat](https://img.youtube.com/vi/o2sXKa9W4OM/0.jpg)](https://www.youtube.com/watch?v=o2sXKa9W4OM)
-- https://youtu.be/8HQR6GdtI9o
+- https://youtu.be/o2sXKa9W4OM
 # Architecture
 ![architecture](architecture.png "architecture")
 # Prerequisite
